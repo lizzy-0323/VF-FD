@@ -1,0 +1,3 @@
+target: diagnosis
+path: "../dataset/wdbc.csv"
+ignore_header: False

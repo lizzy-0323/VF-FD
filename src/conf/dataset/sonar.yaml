@@ -1,0 +1,2 @@
+path: "../dataset/sonar.csv"
+ignore_header: True

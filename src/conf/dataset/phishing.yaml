@@ -1,0 +1,3 @@
+target: CLASS_LABEL
+path: "../dataset/phishing.csv"
+ignore_header: False

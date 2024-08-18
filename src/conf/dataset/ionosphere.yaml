@@ -1,0 +1,2 @@
+path: "../dataset/ionosphere.csv"
+ignore_header: True

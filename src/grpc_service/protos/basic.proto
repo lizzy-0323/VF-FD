@@ -1,0 +1,17 @@
+syntax = "proto3";
+package proto;
+message dataframe{
+  repeated series series =1;
+}
+message series{
+  int64 index =1;
+  map<string, value> columns = 2;
+}
+message value{
+  oneof data {
+    int32 int_value = 1;
+    float float_value = 2;
+    string string_value = 3;
+  }
+}
+  

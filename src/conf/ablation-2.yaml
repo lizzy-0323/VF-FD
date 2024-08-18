@@ -1,0 +1,39 @@
+# config.yaml
+dataset_lst:
+  - "knn"
+  - "sonar"
+  # - "census"
+  # - "mimic"
+  - "nomao"
+  - "phishing"
+  - "physioNet"
+  # - "ionosphere"
+  # - "sylva"
+  # - "activity"
+
+LR_task_dataset:
+  - "nomao"
+  - "knn"
+  - "phishing"
+
+RF_task_dataset:
+  - "activity"
+
+method_file_dict:
+  # all_features: "all_features.csv"
+  # arf_feature: "arf_feature_selected_features.csv"
+  # arf_label: "arf_label_selected_features.csv"
+  # clean: "clean_features.csv"
+  gf: "gf_selected_features.csv"
+  random_sample: "gf_random_selected_features.csv"
+  # filter: "filter_selected_features.csv"
+  # filter_emd: "filter_plus_selected_features.csv"
+  # global_lasso: "global_lasso_selected_features.csv"
+  # local_lasso: "local_lasso_selected_features.csv"
+  # mi: "global_mi_selected_features.csv"
+  # random: "random_selected_features.csv"
+  random_feature: "emd_random_selected_features.csv"
+
+model_lst:
+  - "mlp"
+  - "logistic"

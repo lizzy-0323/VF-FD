@@ -1,0 +1,25 @@
+# client config
+client_1:
+  host: "127.0.0.1"
+  port: 50051
+  dataset_path: "./data/client_1.csv"
+  log_path: "./log/client_1.log"
+  distance_metric: "cosine"
+client_2:
+  host: "127.0.0.1"
+  port: 50052
+  dataset_path: "./data/client_2.csv"
+  log_path: "./log/client_2.log"
+  distance_metric: "cosine"
+client_3:
+  host: "127.0.0.1"
+  port: 50053
+  dataset_path: "./data/client_3.csv"
+  log_path: "./log/client_3.log"
+  distance_metric: "cosine"
+client_4:
+  host: "127.0.0.1"
+  port: 50054
+  dataset_path: "./data/client_4.csv"
+  log_path: "./log/client_4.log"
+  distance_metric: "cosine"

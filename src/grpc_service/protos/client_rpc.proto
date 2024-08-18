@@ -1,0 +1,124 @@
+syntax = "proto3";
+package proto;
+import "basic.proto";
+// 定义客户端接收领导节点请求的 gRPC 服务
+service ClientService {
+  rpc get_id_list(id_request) returns (id_response);
+  rpc get_single_query_result(query_request) returns (query_response);
+  rpc get_data_sample(data_sample_request)returns(data_sample_response);
+  rpc update_id_list(update_id_list_request) returns (update_id_list_response);
+  rpc get_column_list(column_request)returns(column_response);
+  rpc get_psi_result(get_psi_result_request) returns (get_psi_result_response);
+  rpc get_dist_metric(dist_metric_request)returns(dist_metric_response);
+  rpc send_psi_order(send_psi_order_request)returns(send_psi_order_response);
+  rpc get_encrypted_id_list(get_encrypted_id_request)returns(get_encrypted_id_response);
+  rpc get_double_encrypted_id_list(get_double_encrypted_id_request)returns(get_double_encrypted_id_response);
+  rpc send_double_encrypted_id_list(send_double_encrypted_id_request)returns(send_double_encrypted_id_response);
+  rpc send_psi_result(send_psi_result_request)returns(send_psi_result_response);
+}
+message dist_metric_request{
+  int32 client_id =1;
+}
+message dist_metric_response{
+  int32 client_id = 1 ;
+  string dist_metric = 2;
+}
+// column request
+message column_request{
+  int32 client_id = 1;
+  repeated string column_list = 2;
+}
+message column_response{
+  int32 client_id = 1;
+  repeated string column_list = 2;
+}
+// update id
+message update_id_list_request{
+  int32 client_id = 1;
+  repeated int32 id_list = 2;
+}
+message update_id_list_response{
+  int32 client_id = 1;
+}
+// psi request
+message get_psi_result_request{
+  int32 client_id = 1;
+}
+message get_psi_result_response{
+  int32 client_id = 1;
+  repeated int32 id_list = 2;
+}
+// id
+message id_request {
+  int32 client_id = 1;
+}
+message id_response {
+  // id是一个数组
+  int32 client_id = 1;
+  repeated int32 id_list = 2;
+}
+message data_sample_request{
+  int32 client_id = 1;
+  int32 sample_num = 2;
+}
+message data_sample_response{
+  int32 client_id =1;
+  dataframe dataframe=2;
+}
+// query
+message query_request{
+  int32 client_id=1;
+  dataframe query=2;
+}
+message query_response{
+  int32 client_id=1;
+  repeated int32 order_list = 2;
+  dataframe query_result = 3;
+}
+// send psi request
+message send_psi_order_request{
+  int32 client_id =1;
+  int32 partner_id = 2;
+  int32 status = 3;
+}
+message send_psi_order_response{
+  int32 client_id =1;
+  int32 status =2;
+}
+message get_encrypted_id_request{
+  int32 client_id = 1;
+  int32 ek=2;
+}
+message get_encrypted_id_response{
+  int32 client_id = 1;
+  repeated int32 encrypted_id_list =2;
+}
+message get_double_encrypted_id_request{
+  int32 client_id=1;
+  repeated int32 encrypted_id_list = 2;
+}
+message get_double_encrypted_id_response{
+  int32 client_id=1;
+  repeated int32 double_encrypted_id_list = 2;
+}
+message send_double_encrypted_id_request{
+  int32 client_id=1;
+  repeated int32 double_encrypted_id_list = 2;
+}
+message send_double_encrypted_id_response{
+  int32 client_id=1;
+  int32 status = 2;
+}
+message send_psi_result_request{
+  int32 client_id = 1;
+  repeated int32 psi_result = 2;
+}
+message send_psi_result_response{
+  int32 client_id = 1;
+  int32 status =2;
+}
+
+
+
+
+
