@@ -1,4 +1,4 @@
-# FedKnn for overlapping
+# VF-FD: Feature Deduplication for Vertical Federated Learning
 
 ## Usage
 
@@ -14,24 +14,9 @@ pip install -r requirements.txt
 **lanuch client:**
 
 ```python
-python lanuch_clients.py dataset={dataset_name}`
-```
-
-**lanuch server:**
-
-```python
-python lanuch_server.py server={overlapping_method}
+python train.py
 ```
 ## Experiment
-### Dataset
-- mdlon(人造,效果较差)
-- friedman(人造)
-- sonar (small)
-- ionosphere (small)
-- wdbc (small)
-- phishing
-- mice
-- activity(filter 方法跑不动)
 
 ## Notes
 
