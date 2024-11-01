@@ -1,3 +1,0 @@
-target: Activity
-path: "../dataset/activity-clean.csv"
-ignore_header: False

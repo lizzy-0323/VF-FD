@@ -4,11 +4,9 @@ outputs/
 grpc/
 pkg/
 dataset/
-!src/conf/dataset
-result/
+!conf/dataset
 multirun/
-*.txt
-*.log
+log/
 *.csv
 *.xlsx
 *.pt
