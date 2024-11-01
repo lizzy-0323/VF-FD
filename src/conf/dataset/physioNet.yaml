@@ -1,0 +1,3 @@
+target: In-hospital_death
+path: "../dataset/PhysioNet.csv"
+ignore_header: False

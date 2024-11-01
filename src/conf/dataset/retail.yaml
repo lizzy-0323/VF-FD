@@ -1,0 +1,3 @@
+target: label
+path: "../dataset/retail.csv"
+ignore_header: False

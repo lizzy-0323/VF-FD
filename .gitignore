@@ -1,0 +1,15 @@
+__pycache__/
+outputs/
+.vscode/
+grpc/
+pkg/
+dataset/
+!src/conf/dataset
+result/
+multirun/
+*.txt
+*.log
+*.csv
+*.xlsx
+*.pt
+.DS_Store

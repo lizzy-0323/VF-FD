@@ -1,0 +1,12 @@
+# server config
+k: 10
+host: "127.0.0.1"
+port: 50055
+algorithm: threshold
+mode: test
+# overlapping calculate method
+# [chi2,mi,stats,pearson]
+overlapping_cal_method: mi
+log_path: "./log/server.log"
+gc_path: "./data/"
+distance_metric: "cosine"

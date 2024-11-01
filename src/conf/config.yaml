@@ -1,0 +1,14 @@
+# hydra config
+defaults:
+  - dataset: default
+  - server: mi
+  - client: default
+  - override hydra/job_logging: disabled
+  # - override hydra/mode: multirun
+# client num
+num_clients: 4
+# encrypt config
+encrypt:
+  per_encrypt_time: 0.01
+  float_bytes: 4
+  homomorphic_bytes: 16384

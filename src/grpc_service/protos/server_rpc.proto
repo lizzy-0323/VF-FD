@@ -1,0 +1,33 @@
+syntax = "proto3";
+package proto;
+import "basic.proto";
+import "google/protobuf/empty.proto";
+// 定义server节点的rpc服务
+service ServerService {
+    rpc single_query(single_query_request)returns (single_query_response);
+    rpc batch_query(batch_query_request)returns(batch_query_response);
+    rpc get_client_column_dict(google.protobuf.Empty)returns (client_column_dict_response);
+    rpc get_server_config(google.protobuf.Empty)returns(server_config_response);
+} 
+message DataArray {
+    repeated string values = 1;
+  }
+message client_column_dict_response{
+    map<int32, DataArray> client_column_dict = 1;
+}
+message batch_query_request{
+    repeated dataframe query_list= 1;
+}
+message batch_query_response{
+    repeated dataframe query_result =1;
+}
+message single_query_request{
+    dataframe query=1;
+}
+message single_query_response{
+    dataframe query_result = 1;
+}
+message server_config_response{
+    map<string,string> config = 1;
+}
+    

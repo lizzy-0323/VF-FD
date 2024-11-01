@@ -1,0 +1,3 @@
+target: future_readmit
+path: "../dataset/MICU_admits_clean_modify.csv"
+ignore_header: False

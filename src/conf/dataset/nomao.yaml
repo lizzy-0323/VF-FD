@@ -1,0 +1,3 @@
+target: target
+path: "../dataset/Nomao-clean.csv"
+ignore_header: False
