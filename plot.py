@@ -39,12 +39,11 @@ def plot_accuracy_effect_of_tau():
     # 添加一些图形元素
     plt.ylabel("Accuracy")
     plt.xlabel("Dataset Split")
-    plt.title("Accuracy Effect of τ", fontproperties=font_title)
     plt.legend()
 
     # 展示图形
     plt.tight_layout()
-    plt.savefig("accuracy_result.png", bbox_inches="tight", dpi=1200)
+    plt.savefig("./result/fig/accuracy_result.png", bbox_inches="tight", dpi=1200)
     plt.show()
 
 
@@ -112,7 +111,7 @@ def plot_efficiency_effect_of_tau():
 
     # 展示图形
     plt.tight_layout()
-    plt.savefig("efficiency_result.png", dpi=1200)
+    plt.savefig("./result/fig/efficiency_result.png", dpi=1200)
     plt.show()
 
 
@@ -171,7 +170,7 @@ def plot_dataset_and_effiency():
 
     # 展示图形
     plt.tight_layout()
-    plt.savefig("result.png", dpi=1200)
+    plt.savefig("./result/fig/result.png", dpi=1200)
     plt.show()
 
 
