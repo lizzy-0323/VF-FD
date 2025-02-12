@@ -61,9 +61,7 @@ def partition_data(data):
     # overlapping_column_name = column_counts[column_counts > 1].index.tolist()
     non_overlapping_column_name = column_counts[column_counts == 1].index.tolist()
     # Each sublist contains the same overlapping column names
-    overlapping_df_lst = [
-        data[col] * (count - 1) for col, count in column_counts.items() if count > 1
-    ]
+    overlapping_df_lst = [data[col] * (count - 1) for col, count in column_counts.items() if count > 1]
     # Identify non-overlapping columns (columns with count equal to 1)
     non_overlapping_columns = data[non_overlapping_column_name]
     num_df = overlapping_df_lst[0].shape[1]
@@ -75,9 +73,7 @@ def partition_data(data):
             # 提取第column_index列
             column = overlapping_df.iloc[:, column_index]
             # 将提取的列作为新的DataFrame添加到new_df_list的对应位置
-            overlapping_column_lst[column_index] = merge(
-                overlapping_column_lst[column_index], column
-            )
+            overlapping_column_lst[column_index] = merge(overlapping_column_lst[column_index], column)
 
     return overlapping_column_lst, non_overlapping_columns
 
@@ -106,9 +102,7 @@ def partition_data_by_random(data, m, n):
     num_columns = data.shape[1]
     non_overlapping_columns = data.copy()
     if m * n > num_columns:
-        raise ValueError(
-            "The product of m and n cannot exceed the number of columns in the data."
-        )
+        raise ValueError("The product of m and n cannot exceed the number of columns in the data.")
 
     overlapping_groups = []
     # 随机选择m个特征组，每个组n个特征
@@ -185,9 +179,7 @@ def partition_data_by_emd(data, threshold=THRESHOLD, metric="emd"):
         return components
 
     group = find_connected_components(overlapping_column_pairs)
-    overlapping_column_lst = [
-        data.iloc[:, overlapping_column] for overlapping_column in group
-    ]
+    overlapping_column_lst = [data.iloc[:, overlapping_column] for overlapping_column in group]
     non_overlapping_columns = data[non_overlapping_columns]
     return overlapping_column_lst, non_overlapping_columns
 
@@ -198,9 +190,7 @@ def partition_data_by_distance_and_name(data, threshold=THRESHOLD):
     # overlapping_column_name = column_counts[column_counts > 1].index.tolist()
     non_overlapping_column_name = column_counts[column_counts == 1].index.tolist()
     # Each sublist contains the same overlapping column names
-    overlapping_df_lst = [
-        data[col] for col, count in column_counts.items() if count > 1
-    ]
+    overlapping_df_lst = [data[col] for col, count in column_counts.items() if count > 1]
     # Identify non-overlapping columns (columns with count equal to 1)
     non_overlapping_columns = data[non_overlapping_column_name]
     num_df = overlapping_df_lst[0].shape[1]
@@ -212,9 +202,7 @@ def partition_data_by_distance_and_name(data, threshold=THRESHOLD):
             # 提取第column_index列
             column = overlapping_df.iloc[:, column_index]
             # 将提取的列作为新的DataFrame添加到new_df_list的对应位置
-            overlapping_column_lst[column_index] = merge(
-                overlapping_column_lst[column_index], column
-            )
+            overlapping_column_lst[column_index] = merge(overlapping_column_lst[column_index], column)
     for col_1 in non_overlapping_columns.columns:
         for column_index, overlapping_column in enumerate(overlapping_column_lst):
             for col_2 in overlapping_column.columns:

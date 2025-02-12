@@ -4,13 +4,16 @@ IP = "127.0.0.1"
 CLIENTS_NUM = 4
 LEADER_IP = "127.0.0.1"
 LEADER_PORT = 8000
+
 # Encrypt
 Q = 15485863
 PER_ENCRYPT_TIME = 0.01
 FLOAT_BYTES = 4
 HOMOMORPHIC_BYTES = 4096 * 4
+
 # log
 LOG_PATH = "./log/log.txt"
+
 # dataset
 NOISE_SIZE = 0.5
 QUERY_NUM = 1

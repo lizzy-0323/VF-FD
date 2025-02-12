@@ -1,4 +1,6 @@
-# VF-FD: Feature Deduplication for Vertical Federated Learning
+# VF-FD
+
+[DASFAA 2024] Official repository for "VF-FD: Feature Deduplication for Vertical Federated Learning"
 
 ## Usage
 
@@ -10,8 +12,6 @@ pip install -r requirements.txt
 ```
 
 ### How to Use
-
-**lanuch client:**
 
 ```python
 python train.py

@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+"""
+@Author: laziyu
+@Date:2024-3-8
+@Description: run all the scripts in order
+"""
 import os
 import subprocess
 
